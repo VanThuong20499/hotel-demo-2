@@ -1,0 +1,92 @@
+:root{
+    --secondary-font: 'Gilda Display', serif;
+    --normal-font: 'Barlow', sans-serif;
+    --primary-color: #aa8453;
+    --text-color: #222;
+    --text-color-2: #666666;
+    --b-color: #f8f5f0;
+}
+
+.border-bottom{
+    border-bottom: 1px solid #f4f4f4;
+}
+
+.row.no-gutters .padding-left-1{
+    padding-left: 1px;
+}
+
+.p-left{
+    padding-left: 15px;
+}
+
+.p-right{
+    padding-right: 15px;
+}
+
+.mb-30{
+    margin-bottom: 30px;
+}
+
+.mb-15{
+    margin-bottom: 15px;
+}
+
+.mt-90{
+    margin-top: 90px;
+}
+
+.row-reverse{
+    flex-direction: row-reverse;
+}
+
+.height-300{
+    height: 300px;
+}
+
+.d-pc-none{
+    display: none;
+}
+
+@media only screen and (min-width: 46.25em) and (max-width: 63.9375em){
+    .row.no-gutters .padding-left-1{
+        padding-left: 0px;
+    }
+
+    .d-tb-none{
+        display: none;
+    }
+
+    .d-tb-block{
+        display: block;
+    }
+
+    .mb-tb-30{
+        margin-bottom: 30px;
+    }
+
+    .height-tb-unset{
+        height: unset;
+    }
+}
+
+@media only screen and (max-width: 46.1875em){
+    .d-mb-none{
+        display: none;
+    }
+
+    .d-mb-block{
+        display: block;
+    }
+
+    .mb-mb-15{
+        margin-bottom: 15px;
+    }
+
+    .mb-mb-30{
+        margin-bottom: 30px;
+    }
+
+    .height-mb-unset{
+        height: unset;
+    }
+}
