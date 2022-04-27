@@ -325,7 +325,7 @@ $('.services-items').slick({
     ]
 });
 
-// slide Extra client
+// slide comment
 $('.comment-items').slick({
     dots: true,
     infinite: false,
