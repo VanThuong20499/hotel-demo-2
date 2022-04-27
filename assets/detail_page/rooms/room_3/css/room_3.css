@@ -140,6 +140,7 @@
 
 .header__title{
     padding: 120px 0;
+    text-align: end;
 }
 
 .header__title h2{
