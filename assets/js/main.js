@@ -12,6 +12,24 @@
     })
 })();
 
+// click mở thanh menu mobile tablet
+(function(){
+    const headerItem = document.querySelector('.header__nav-items');
+    const headerBtn = document.querySelector('.header__nav-btn');
+    if(window.innerWidth < 1024){
+        headerItem.style.display = 'none';
+    }else{
+        headerItem.style.display = 'flex';
+    }
+    headerBtn.addEventListener('click', function(){
+        if(headerItem.style.display == 'none'){
+            headerItem.style.display = 'block';
+        }else{
+            headerItem.style.display = 'none';
+        }
+    })
+})();
+
 // Chuyển banner header
 
 (function(){
@@ -55,17 +73,6 @@
                 headerTitle.style.opacity = 0;
                 headerLink.style.opacity = 0;
                 // animation
-                headerImg.animate([
-                    {
-                        opacity: 0.7
-                    },
-                    {
-                        opacity: 1
-                    }
-                ],{
-                    duration: 1000
-                })
-
                 function sleep(ms){
                     return new Promise((resolve) => {
                         setTimeout(resolve, ms)
@@ -285,7 +292,6 @@ scrollExper();
 })();
 
 // slide Extra Services
-
 $('.services-items').slick({
     dots: true,
     infinite: false,
@@ -319,8 +325,7 @@ $('.services-items').slick({
     ]
 });
 
-// slide Extra Services
-
+// slide Extra client
 $('.comment-items').slick({
     dots: true,
     infinite: false,
@@ -472,4 +477,37 @@ $('.comment-items').slick({
         },1000)
     }
     nextClients()
+})();
+
+// slide Hotel Blog
+
+(function(){
+    const prevBtn = document.querySelector('.container__blogs-prev');
+    const nextBtn = document.querySelector('.container__blogs-next');
+    const blogItems = document.querySelector('.container__blog-items');
+    var count = 0;
+    prevBtn.addEventListener('click', function(){
+        if(count > 0 && window.innerWidth >= 1024){
+            count-=document.querySelector('.container__blog-item').clientWidth + 30;
+            blogItems.style.transform = `translate3d( -${count}px, 0, 0)`;
+        }else if(count > 0 && window.innerWidth < 1024 && window.innerWidth >= 740){
+            count-=document.querySelector('.container__blog-item').clientWidth + 16;
+            blogItems.style.transform = `translate3d( -${count}px, 0, 0)`;
+        }else if(count > 0 && window.innerWidth < 740){
+            count-=document.querySelector('.container__blog-item').clientWidth + 8;
+            blogItems.style.transform = `translate3d( -${count}px, 0, 0)`;
+        }
+    })
+    nextBtn.addEventListener('click', function(){
+        if(window.innerWidth >= 1024 && count < blogItems.scrollWidth - (document.querySelector('.container__blog-item').clientWidth + 30) * 3){
+            count+=document.querySelector('.container__blog-item').clientWidth + 30;
+            blogItems.style.transform = `translate3d( -${count}px, 0, 0)`;
+        }else if(window.innerWidth < 1024 && window.innerWidth >= 740 && count < blogItems.scrollWidth - (document.querySelector('.container__blog-item').clientWidth + 16) * 2){
+            count+=document.querySelector('.container__blog-item').clientWidth + 16;
+            blogItems.style.transform = `translate3d( -${count}px, 0, 0)`;
+        }else if(window.innerWidth < 740 && count < blogItems.scrollWidth - (document.querySelector('.container__blog-item').clientWidth + 8)){
+            count+=document.querySelector('.container__blog-item').clientWidth + 8;
+            blogItems.style.transform = `translate3d( -${count}px, 0, 0)`;
+        }
+    })
 })();

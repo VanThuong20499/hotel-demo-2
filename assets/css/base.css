@@ -1,10 +1,21 @@
 :root{
     --secondary-font: 'Gilda Display', serif;
     --normal-font: 'Barlow', sans-serif;
-    --primary-color: #aa8453;
+    --primary-color: #ab8a62;
     --text-color: #222;
     --text-color-2: #666666;
     --b-color: #f8f5f0;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth !important;
+    font-family: 'Barlow Condensed', sans-serif;
 }
 
 .border-bottom{
@@ -31,6 +42,10 @@
     margin-bottom: 15px;
 }
 
+.mt-10{
+    margin-top: 10px;
+}
+
 .mt-90{
     margin-top: 90px;
 }
@@ -45,6 +60,10 @@
 
 .d-pc-none{
     display: none;
+}
+
+.p-relative{
+    position: relative;
 }
 
 @media only screen and (min-width: 46.25em) and (max-width: 63.9375em){
