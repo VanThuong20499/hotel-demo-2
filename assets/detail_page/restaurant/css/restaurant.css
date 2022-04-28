@@ -328,6 +328,46 @@
     padding-left: 12px;
 }
 
+.container__restaurant-menu{
+    padding: 120px 0;
+    background-color: var(--text-color);
+}
+
+.container__restaurant-menu h5{
+    color: var(--primary-color);
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: 400;
+    letter-spacing: 6px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.container__restaurant-menu h2{
+    font-size: 45px;
+    text-align: center;
+    color: #fff;
+    font-weight: 400;
+    font-family: var(--secondary-font);
+    margin-bottom: 20px;
+}
+
+.container__restaurant-menu-items{
+    list-style: none;
+    overflow-x: hidden;
+    display: flex;
+}
+
+.container__restaurant-menu-item{
+    color: #fff;
+    font-size: 20px;
+    font-family: var(--secondary-font);
+    min-width: 25%;
+    height: 57px;
+    display: inline-block;
+    flex: 1;
+}
+
 .container__comment{
     padding: 120px 0;
     background-attachment: fixed;

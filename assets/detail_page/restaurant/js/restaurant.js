@@ -4,10 +4,10 @@
     window.addEventListener('scroll', function(){
         if(document.documentElement.scrollTop > 30){
             nav.classList.add('active');
-            document.querySelector('.header__nav-logo').src = '../../../../assets/img/logo-dark.png';
+            document.querySelector('.header__nav-logo').src = '/assets/img/logo-dark.png';
         }else{
             nav.classList.remove('active');
-            document.querySelector('.header__nav-logo').src = '../../../../assets/img/logo (1).png';
+            document.querySelector('.header__nav-logo').src = '/assets/img/logo (1).png';
         }
     })
 })();
