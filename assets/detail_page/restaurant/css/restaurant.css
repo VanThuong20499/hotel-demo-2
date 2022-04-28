@@ -354,8 +354,9 @@
 
 .container__restaurant-menu-items{
     list-style: none;
-    overflow-x: hidden;
+    overflow: hidden;
     display: flex;
+    padding: 20px 0 60px;
 }
 
 .container__restaurant-menu-item{
@@ -366,6 +367,83 @@
     height: 57px;
     display: inline-block;
     flex: 1;
+    line-height: 57px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.container__restaurant-menu-item.active{
+    border: 1px solid var(--primary-color);
+}
+
+.container__restaurant-menu-btn{
+    opacity: 0;
+    transition: all linear 0.2s;
+}
+
+.container__restaurant-menu-btn-next,
+.container__restaurant-menu-btn-prev{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    border: 1px solid var(--primary-color);
+    top: 28px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    transition: all linear 0.2s;
+}
+
+.container__restaurant-menu-btn-prev{
+    left: 30px;
+}
+
+.container__restaurant-menu-btn-next{
+    right: 30px;
+}
+
+.container__restaurant-menu-btn-prev:hover,
+.container__restaurant-menu-btn-next:hover{
+    color: var(--primary-color);
+}
+
+.p-relative:hover .container__restaurant-menu-btn{
+    opacity: 1;
+}
+
+.container__restaurant-menu-info{
+    margin-bottom: 20px;
+}
+
+.container__restaurant-menu-price{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed var(--primary-color);
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.container__restaurant-menu-price h5{
+    font-size: 20px;
+    font-family: var(--secondary-font);
+    letter-spacing: 0;
+    text-transform: capitalize;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.container__restaurant-menu-price span{
+    font-size: 20px;
+    color: #fff;
+    font-family: var(--secondary-font);
+}
+
+.container__restaurant-menu-info p{
+    font-size: 15px;
+    color: #adadad;
+    font-family: var(--normal-font);
 }
 
 .container__comment{
@@ -690,12 +768,16 @@
     .grid.wide{
         overflow-x: hidden;
     }
+
+    .container__restaurant-menu-btn{
+        display: none;
+    }
 }
 
 /* tablet */
 @media only screen and (min-width: 46.25em) and (max-width: 63.9375em){
-    .header__form-group-input-item{
-        width: 50%;
+    .container__restaurant-menu-item{
+        min-width: 33.333334%;
     }
 }
 
@@ -741,5 +823,9 @@
     .header__form-group{
         background-color: var(--b-color);
         padding: 30px 15px;
+    }
+
+    .container__restaurant-menu-item{
+        min-width: 50%;
     }
 }

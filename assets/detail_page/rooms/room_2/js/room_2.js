@@ -12,6 +12,19 @@
     })
 })();
 
+// responsive menu header
+(function(){
+    const headerItem = document.querySelector('.header__nav-items');
+    const headerBtn = document.querySelector('.header__nav-btn');
+    window.addEventListener('resize', function(){
+      if(document.documentElement.scrollWidth > 1023){
+        headerItem.style.display = 'flex';
+      }else if(document.documentElement.scrollWidth <= 1023){
+        headerItem.style.display = 'none';
+      }
+    })
+  })();
+
 // click mở thanh menu mobile tablet
 (function(){
     const headerItem = document.querySelector('.header__nav-items');
