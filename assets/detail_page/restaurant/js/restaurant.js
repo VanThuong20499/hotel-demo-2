@@ -89,6 +89,42 @@
   autoNextImg();
 })();
 
+// next item Restaurant Menu
+(function(){
+  const menuItemWrap = document.querySelector('.container__restaurant-menu-items');
+  const menuItem = document.querySelectorAll('.container__restaurant-menu-item');
+  const prevBtn = document.querySelector('.container__restaurant-menu-btn-prev');
+  const nextBtn = document.querySelector('.container__restaurant-menu-btn-next');
+  var count = 0;
+  function NextBtn(){
+    count = count - menuItem[0].offsetWidth;
+    if(document.documentElement.clientWidth >=1024){
+      if(count < (menuItemWrap.offsetWidth - menuItemWrap.scrollWidth)){
+        count = 0;
+      }
+    }
+    for(var i=0; i<menuItem.length; i++){
+      menuItem[i].style.transform = `translate3d(${count}px, 0, 0)`;
+    }
+  }
+  nextBtn.addEventListener('click', NextBtn)
+  prevBtn.addEventListener('click', function(){
+    count = menuItem[0].offsetWidth + count;
+    if(count > 0){
+      count = 0;
+    }
+    for(var i=0; i<menuItem.length; i++){
+      menuItem[i].style.transform = `translate3d(${count}px, 0, 0)`;
+    }
+  })
+  for(var i=0; i<menuItem.length; i++){
+    menuItem[i].addEventListener('click', function(){
+      document.querySelector('.container__restaurant-menu-item.active').classList.remove('active');
+      this.classList.add('active');
+    })
+  }
+})();
+
 // slide comment
 $('.comment-items').slick({
     dots: true,
