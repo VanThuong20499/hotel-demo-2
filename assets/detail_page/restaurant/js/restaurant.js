@@ -4,10 +4,10 @@
     window.addEventListener('scroll', function(){
         if(document.documentElement.scrollTop > 30){
             nav.classList.add('active');
-            document.querySelector('.header__nav-logo').src = '/assets/img/logo-dark.png';
+            document.querySelector('.header__nav-logo').src = '../../../assets/img/logo-dark.png';
         }else{
             nav.classList.remove('active');
-            document.querySelector('.header__nav-logo').src = '/assets/img/logo (1).png';
+            document.querySelector('.header__nav-logo').src = '../../../assets/img/logo (1).png';
         }
     })
 })();
@@ -50,15 +50,15 @@
   const myImgHeader = [
     {
       id: 0,
-      path: "/assets/img/1\ \(6\).jpg",
+      path: "../../../assets/img/1\ \(6\).jpg",
     },
     {
       id: 1,
-      path: "/assets/img/2\ \(6\).jpg",
+      path: "../../../assets/img/2\ \(6\).jpg",
     },
     {
       id: 2,
-      path: "/assets/img/3\ \(6\).jpg",
+      path: "../../../assets/img/3\ \(6\).jpg",
     },
   ]
   var count = 0;
