@@ -43,32 +43,6 @@
     })
 })();
 
-// reposive tablet vs mobile rooms-suites
-
-(function(){
-    const roomItems = document.querySelectorAll('.container__rooms-suites .row.p-relative');
-    if(this.innerWidth < 1024){
-        for(var i=0; i<roomItems.length; i++){
-            roomItems[i].classList.remove('p-relative');
-        }
-    }else if(this.innerWidth >= 1024){
-        for(var i=0; i<roomItems.length; i++){
-            roomItems[i].classList.add('p-relative');
-        }
-    }
-    window.addEventListener('resize', function(){
-        if(this.innerWidth < 1024){
-            for(var i=0; i<roomItems.length; i++){
-                roomItems[i].classList.remove('p-relative');
-            }
-        }else if(this.innerWidth >= 1024){
-            for(var i=0; i<roomItems.length; i++){
-                roomItems[i].classList.add('p-relative');
-            }
-        }
-    })
-})();
-
 // slide clients
 (function(){
     const myImgs = [
