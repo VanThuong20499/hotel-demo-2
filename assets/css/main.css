@@ -1025,10 +1025,6 @@
     padding: 120px 0;
 }
 
-.container__blogs .pos{
-    position: relative;
-}
-
 .container__blogs h5{
     color: var(--primary-color);
     font-weight: 400;

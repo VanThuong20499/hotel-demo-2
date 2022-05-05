@@ -69,22 +69,6 @@
     })
 })();
 
-// click hien thi video
-(function(){
-    const videoBtn = document.querySelectorAll('.container__video-gallery-btn');
-    const video = document.querySelector('.video__home');
-    for(var i=0; i<videoBtn.length; i++){
-        videoBtn[i].addEventListener('click', function(){
-            video.style.display = 'block';
-        })
-    }
-    video.addEventListener('click', function(event){
-        if(event.target === this){
-            this.style.display = 'none';
-        }
-    })
-})()
-
 // slide clients
 (function(){
     const myImgs = [
