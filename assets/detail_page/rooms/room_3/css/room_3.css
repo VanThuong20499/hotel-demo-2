@@ -936,10 +936,6 @@
     .container__booking-form{
         bottom: 0;
     }
-
-    .grid.wide{
-        overflow-x: hidden;
-    }
 }
 
 /* tablet */

@@ -768,10 +768,6 @@
         display: none;
     }
 
-    .grid.wide{
-        overflow-x: hidden;
-    }
-
     .container__restaurant-menu-btn{
         display: none;
     }

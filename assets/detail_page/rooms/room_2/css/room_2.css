@@ -905,10 +905,6 @@
         bottom: 0;
     }
 
-    .grid.wide{
-        overflow-x: hidden;
-    }
-
     .container__rooms-suites-wrap{
         padding: 40px;
     }
@@ -935,20 +931,6 @@
     .grid.wide{
         padding-left: 15px;
         padding-right: 15px;
-    }
-
-    .header__form-group{
-        padding-bottom: 0;
-    }
-
-    .header__form-group-items{
-        flex-wrap: wrap;
-    }
-
-    .header__form-group-btn,
-    .header__form-group-select,
-    .header__form-group-input-item{
-        width: 100%;
     }
     
     .d-flex-warp{

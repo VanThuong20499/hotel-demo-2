@@ -50,15 +50,15 @@
     const myImgHeader = [
       {
         id: 0,
-        path: "../../../assets/img/1\ \(6\).jpg",
+        path: "../../../assets/img/3\ \(3\).jpg",
       },
       {
         id: 1,
-        path: "../../../assets/img/2\ \(6\).jpg",
+        path: "../../../assets/img/1\ \(4\).jpg",
       },
       {
         id: 2,
-        path: "../../../assets/img/3\ \(6\).jpg",
+        path: "../../../assets/img/2\ \(4\).jpg",
       },
     ]
     var count = 0;
@@ -225,7 +225,6 @@ $('.comment-items').slick({
             _thisSpaTitles.classList.add('active');
             _thisSpaText.classList.add('open-text');
             _thisSpaWraps.setAttribute('style', `height: ${_thisSpaTitles.clientHeight + _thisSpaText.clientHeight}px`);
-            console.log(_thisSpaText.clientHeight, _thisSpaTitles.clientHeight)
         })
     }
     for(var i=0; i<spaBtnsClose.length; i++){

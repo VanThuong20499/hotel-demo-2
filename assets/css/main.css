@@ -1532,10 +1532,6 @@
         bottom: 0;
     }
 
-    .grid.wide{
-        overflow-x: hidden;
-    }
-
     .container__blogs-next {
         right: 30px;
     }

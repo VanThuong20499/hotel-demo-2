@@ -829,10 +829,6 @@
     .header__container-phone{
         display: none;
     }
-
-    .grid.wide{
-        overflow-x: hidden;
-    }
 }
 
 /* tablet */
