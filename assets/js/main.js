@@ -157,110 +157,108 @@
                     })
             }
         }
+        clearInterval(clearAutoNext)
+        clearAutoNext = setInterval(autoNext, 5000);
     }
     for(var i=0; i<headerBtn.length; i++){
         headerBtn[i].addEventListener('click', transfer)
     }
-
     function autoNext(){
-        setTimeout(function(){
-            count++;
-            if(count >= myArrayImg.length){
-                count = 0;
+        count++;
+        if(count >= myArrayImg.length){
+            count = 0;
+        }
+        headerImg.style.backgroundImage = `url('${myArrayImg[count].path}')`;
+        document.querySelector('.header__container-title-btn .active').classList.remove('active');
+        headerBtn[count].classList.add('active');
+        headerText.textContent = myArrayImg[count].text;
+        headerTitle.textContent = myArrayImg[count].title;
+        headerText.style.opacity = 0;
+        headerTitle.style.opacity = 0;
+        headerLink.style.opacity = 0;
+        // animation
+        headerImg.animate([
+            {
+                opacity: 0.7
+            },
+            {
+                opacity: 1
             }
-            headerImg.style.backgroundImage = `url('${myArrayImg[count].path}')`;
-            document.querySelector('.header__container-title-btn .active').classList.remove('active');
-            headerBtn[count].classList.add('active');
-            headerText.textContent = myArrayImg[count].text;
-            headerTitle.textContent = myArrayImg[count].title;
-            headerText.style.opacity = 0;
-            headerTitle.style.opacity = 0;
-            headerLink.style.opacity = 0;
-            // animation
-            headerImg.animate([
-                {
-                    opacity: 0.7
-                },
-                {
-                    opacity: 1
-                }
-            ],{
-                duration: 1000
+        ],{
+            duration: 1000
+        })
+
+        function sleep(ms){
+            return new Promise((resolve) => {
+                setTimeout(resolve, ms)
             })
+        }
 
-            function sleep(ms){
-                return new Promise((resolve) => {
-                    setTimeout(resolve, ms)
+        sleep(0)
+            .then(() =>{
+                headerStar.animate([
+                    {
+                        transform: 'translateY(50px)',
+                        opacity: 0
+                    },
+                    {
+                        transform: 'translateY(0px)',
+                        opacity: 1
+                    },
+                ],{
+                    duration: 1000,
                 })
-            }
-
-            sleep(0)
-                .then(() =>{
-                    headerStar.animate([
-                        {
-                            transform: 'translateY(50px)',
-                            opacity: 0
-                        },
-                        {
-                            transform: 'translateY(0px)',
-                            opacity: 1
-                        },
-                    ],{
-                        duration: 1000,
-                    })
-                    return sleep(500)
+                return sleep(500)
+            })
+            .then(() =>{
+                headerText.animate([
+                    {
+                        transform: 'translateY(50px)',
+                        opacity: 0
+                    },
+                    {
+                        transform: 'translateY(0px)',
+                        opacity: 1
+                    },
+                ],{
+                    duration: 800,
                 })
-                .then(() =>{
-                    headerText.animate([
-                        {
-                            transform: 'translateY(50px)',
-                            opacity: 0
-                        },
-                        {
-                            transform: 'translateY(0px)',
-                            opacity: 1
-                        },
-                    ],{
-                        duration: 800,
-                    })
-                    headerText.style.opacity = 1;
-                    return sleep(500)
+                headerText.style.opacity = 1;
+                return sleep(500)
+            })
+            .then(() =>{
+                headerTitle.animate([
+                    {
+                        transform: 'translateY(40px)',
+                        opacity: 0
+                    },
+                    {
+                        transform: 'translateY(0px)',
+                        opacity: 1
+                    },
+                ],{
+                    duration: 700,
                 })
-                .then(() =>{
-                    headerTitle.animate([
-                        {
-                            transform: 'translateY(40px)',
-                            opacity: 0
-                        },
-                        {
-                            transform: 'translateY(0px)',
-                            opacity: 1
-                        },
-                    ],{
-                        duration: 700,
-                    })
-                    headerTitle.style.opacity = 1;
-                    return sleep(500)
+                headerTitle.style.opacity = 1;
+                return sleep(500)
+            })
+            .then(() =>{
+                headerLink.animate([
+                    {
+                        transform: 'translateY(30px)',
+                        opacity: 0
+                    },
+                    {
+                        transform: 'translateY(0px)',
+                        opacity: 1
+                    },
+                ],{
+                    duration: 600,
                 })
-                .then(() =>{
-                    headerLink.animate([
-                        {
-                            transform: 'translateY(30px)',
-                            opacity: 0
-                        },
-                        {
-                            transform: 'translateY(0px)',
-                            opacity: 1
-                        },
-                    ],{
-                        duration: 600,
-                    })
-                    headerLink.style.opacity = 1;
-                })
-            autoNext();
-        }, 10000);
+                headerLink.style.opacity = 1;
+            })
     }
-    autoNext();
+    var clearAutoNext = setInterval(autoNext, 5000);
 })();
 
 // scroll container__experience-warp
