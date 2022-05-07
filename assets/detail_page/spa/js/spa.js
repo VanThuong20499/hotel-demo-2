@@ -72,21 +72,20 @@
             header.style.backgroundImage = `url("${myImgHeader[i].path}")`;
           }
         }
+        clearInterval(closeAutoNext);
+        closeAutoNext = setInterval(autoNextImg, 3000)
       })
     }
     function autoNextImg(){
-      setTimeout(function(){
-        count++;
-        if(count >= myImgHeader.length){
-          count = 0;
-        }
-        header.style.backgroundImage = `url("${myImgHeader[count].path}")`;
-        document.querySelector('.header__nav-btn-slider-icon.active').classList.remove('active');
-        sliderIcon[count].classList.add('active');
-        autoNextImg()
-      },5000)
+      count++;
+      if(count >= myImgHeader.length){
+        count = 0;
+      }
+      header.style.backgroundImage = `url("${myImgHeader[count].path}")`;
+      document.querySelector('.header__nav-btn-slider-icon.active').classList.remove('active');
+      sliderIcon[count].classList.add('active');
     }
-    autoNextImg();
+    var closeAutoNext = setInterval(autoNextImg, 3000);
 })();
 
 // slide comment
