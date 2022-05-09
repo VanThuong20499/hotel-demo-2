@@ -5,6 +5,7 @@
     position: relative;
     z-index: 9999999;
     transition: all linear 0.5s;
+    background-attachment: fixed
 }
 
 .header::after{
