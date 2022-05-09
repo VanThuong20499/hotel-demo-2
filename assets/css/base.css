@@ -21,7 +21,7 @@
 html{
     scroll-behavior: smooth !important;
     font-family: 'Barlow Condensed', sans-serif;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 .border-bottom{

@@ -439,7 +439,7 @@
 /* > PC low resolution */
 @media (min-width: 1024px) and (max-width: 1239px) {
     .wide {
-        width: 100%;
+        width: 100%;    
         padding-left: 30px;
         padding-right: 30px;
     }
