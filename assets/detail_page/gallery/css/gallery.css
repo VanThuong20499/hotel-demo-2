@@ -338,28 +338,38 @@
     position: absolute;
 }
 
-.container__experience-phone{
+.container__contact-info-phone{
     display: flex;
     align-items: center;
 }
 
-.container__experience-phone i{
-    font-size: 30px;
-    color: var(--primary-color);
-    margin-right: 20px;
+.container__contact-info-phone-wrap{
+    margin-left: 20px;
 }
 
-.container__experience-phone-number p{
+.container__contact-info-phone > .flaticon-call{
+    font-family: fontIcon;
+    font-size: 35px;
+    color: var(--primary-color);
+}
+
+.flaticon-call:before{
+    content: '\f101';
+}
+
+.container__booking .container__contact-info-phone .flaticon-call{
+    color: #fff;
+    font-size: 40px;
+}
+
+.container__booking .container__contact-info-phone-wrap > p{
     font-size: 15px;
-    color: var(--text-color-2);
-    font-family: var(--normal-font);
 }
 
-.container__experience-phone-number a{
+.container__booking .container__contact-info-phone-wrap > a{
+    color: #fff;
     font-size: 24px;
-    color: var(--primary-color);
     text-decoration: none;
-    letter-spacing: 1px;
 }
 
 .container__booking{

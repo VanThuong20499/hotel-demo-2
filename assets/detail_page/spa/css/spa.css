@@ -304,33 +304,37 @@
     line-height: 30px;
 }
 
-.container__spa-phone{
+.container__contact-info-phone{
     display: flex;
     align-items: center;
 }
 
-.container__spa-phone i{
-    font-size: 30px;
+.container__contact-info-phone > .flaticon-call{
+    font-family: fontIcon;
+    font-size: 35px;
     color: var(--primary-color);
-    margin-right: 20px;
 }
 
-.container__spa-phone-text p{
-    margin-bottom: 0;
+.flaticon-call:before{
+    content: '\f101';
 }
 
-.container__spa-phone-number p{
+.container__contact-info-phone-wrap{
+    margin-left: 20px;
+}
+
+.container__contact-info-phone-wrap > p{
     font-size: 15px;
+    line-height: 30px;
     color: var(--text-color-2);
     font-family: var(--normal-font);
     margin-bottom: 0;
 }
 
-.container__spa-phone-number a{
-    font-size: 24px;
+.container__contact-info-phone-wrap > a{
     color: var(--primary-color);
+    font-size: 24px;
     text-decoration: none;
-    letter-spacing: 1px;
 }
 
 .container__view{

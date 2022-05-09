@@ -287,6 +287,78 @@
     font-family: var(--normal-font);
 }
 
+.container__contact-form h5{
+    font-size: 24px;
+    font-family: var(--secondary-font);
+    font-weight: 400;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+.container__contact-form input{
+    width: 100%;
+    height: 40px;
+    border: none;
+    border-bottom: 1px solid #ececec;
+    font-size: 15px;
+    color: var(--text-color-2);
+    font-family: var(--normal-font);
+    margin-bottom: 15px;
+    outline: none;
+}
+
+.container__contact-form textarea{
+    padding: 10px 0;
+    width: 100%;
+    height: auto;
+    font-size: 15px;
+    color: var(--text-color-2);
+    font-family: var(--normal-font);
+    border: none;
+    border-bottom: 1px solid #ececec;
+    outline: none;
+}
+
+.container__contact-form textarea:focus,
+.container__contact-form input:focus{
+    border-bottom: 1px solid var(--primary-color);
+}
+
+.container__contact-form-btn{
+    border: none;
+    background-color: var(--primary-color);
+    color: #fff;
+    padding: 13px 20px;
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: 'Barlow Condensed', sans-serif;
+    margin-top: 30px;
+    cursor: pointer;
+    position: relative;
+}
+
+.container__contact-form-btn::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background-color: var(--text-color);
+    transition: all linear 0.2s;
+}
+
+.container__contact-form-btn:hover:after{
+    left: 0;
+    width: 100%;
+}
+
+.container__contact-form-btn > span{
+    position: relative;
+    z-index: 1;
+}
+
 .container__booking{
     padding: 120px 0;
     background-attachment: fixed;
@@ -330,6 +402,21 @@
 
 .container__booking-warp p > i{
     font-size: 14px;
+}
+
+.container__booking .container__contact-info-phone .flaticon-call{
+    color: #fff;
+    font-size: 40px;
+}
+
+.container__booking .container__contact-info-phone-wrap > p{
+    font-size: 15px;
+}
+
+.container__booking .container__contact-info-phone-wrap > a{
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
 }
 
 .container__booking-form{
@@ -668,5 +755,9 @@
 
     .container__booking-form{
         margin-top: 30px;
+    }
+
+    .container__contact-form-btn{
+        width: 100%;
     }
 }

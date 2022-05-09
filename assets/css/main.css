@@ -155,17 +155,21 @@
     transform: rotate(270deg);
 }
 
-.header__container-phone i{
+.header__container-phone > .flaticon-call{
+    font-family: fontIcon;
+    font-size: 25px;
     color: #fff;
     width: 50px;
     height: 50px;
     border-radius: 50%;
     border: 1px solid #fff;
-    display: block;
-    line-height: 50px;
     text-align: center;
-    transform: rotate(100deg);
-    font-size: 22px;
+    line-height: 50px;
+    transform: rotate(90deg);
+}
+
+.flaticon-call:before{
+    content: '\f101';
 }
 
 .header__container-phone-text{
@@ -184,6 +188,8 @@
     color: var(--primary-color);
     font-family: var(--secondary-font);
     margin-top: 5px;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .header__container-title{
@@ -421,28 +427,37 @@
     line-height: 30px;
 }
 
-.container__experience-phone{
+.container__contact-info-phone{
     display: flex;
     align-items: center;
 }
 
-.container__experience-phone i{
-    font-size: 30px;
+.container__contact-info-phone > .flaticon-call{
+    font-family: fontIcon;
+    font-size: 35px;
     color: var(--primary-color);
-    margin-right: 20px;
 }
 
-.container__experience-phone-number p{
+.flaticon-call:before{
+    content: '\f101';
+}
+
+.container__contact-info-phone-wrap{
+    margin-left: 20px;
+}
+
+.container__contact-info-phone-wrap > p{
     font-size: 15px;
+    line-height: 30px;
     color: var(--text-color-2);
     font-family: var(--normal-font);
+    margin-bottom: 0;
 }
 
-.container__experience-phone-number a{
-    font-size: 24px;
+.container__contact-info-phone-wrap > a{
     color: var(--primary-color);
+    font-size: 24px;
     text-decoration: none;
-    letter-spacing: 1px;
 }
 
 .container__rooms-suites{
@@ -1024,6 +1039,7 @@
 .container__blogs{
     background-color: var(--text-color);
     padding: 120px 0;
+    position: relative;
 }
 
 .container__blogs h5{
@@ -1142,10 +1158,18 @@
     transform: translateY(calc(-100% - 20px));
 }
 
-.container__blogs-next,
-.container__blogs-prev{
+.container__blogs-btn{
     position: absolute;
     top: 50%;
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+.container__blogs-next,
+.container__blogs-prev{
     width: 50px;
     height: 50px;
     border: 1px solid #fff;
@@ -1153,10 +1177,7 @@
     color: #fff;
     text-align: center;
     line-height: 50px;
-}
-
-.container__blogs-next{
-    right: 0;
+    cursor: pointer;
 }
 
 .container__booking-warp{
@@ -1174,14 +1195,19 @@
     margin-bottom: 30px;
 }
 
-.container__booking-warp .container__experience-phone a,
-.container__booking-warp .container__experience-phone p,
-.container__booking-warp .container__experience-phone i{
+.container__booking .container__contact-info-phone .flaticon-call{
     color: #fff;
+    font-size: 40px;
 }
 
-.container__booking-warp .container__experience-phone{
-    margin-bottom: 30px;
+.container__booking .container__contact-info-phone-wrap > p{
+    font-size: 15px;
+}
+
+.container__booking .container__contact-info-phone-wrap > a{
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
 }
 
 .container__booking-warp p{
