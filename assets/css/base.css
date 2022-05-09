@@ -7,6 +7,11 @@
     --b-color: #f8f5f0;
 }
 
+@font-face {
+    font-family: fontIcon;
+    src: url(../font/Flaticon.woff2);
+}
+
 *{
     padding: 0;
     margin: 0;
