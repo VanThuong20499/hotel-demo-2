@@ -483,7 +483,7 @@
 }
 
 .container__rooms-suites-items:hover .container__rooms-suites-room{
-    transform: translateY(0);
+    transform: translateY(-20px);
 }
 
 .container__rooms-suites-items:hover .line{
@@ -532,10 +532,10 @@
 
 .container__rooms-suites-room{
     position: absolute;
-    bottom: 40px;
+    bottom: 0;
     padding: 0 20px;
     width: 100%;
-    transform: translateY(60px);
+    transform: translateY(25%);
     transition: all linear 0.3s;
 }
 
@@ -1074,7 +1074,6 @@
     position: relative;
     width: 100%;
     height: calc(100% - 100px);
-    /* transform: translate3d( 0, 0, 0); */
     margin-bottom: 100px;
 }
 
@@ -1597,6 +1596,10 @@
     .header__form-group{
         padding-bottom: 0;
     }
+
+    .container__experience{
+        padding: 120px 0 100px;
+    }
     
     .d-flex-warp{
         display: flex;
@@ -1618,11 +1621,5 @@
 
     .container__booking-form{
         margin-top: 30px;
-    }
-}
-
-@media (min-width: 1024px) and (max-width: 1239px){
-    .header__form-group-items{
-        display: flex;
     }
 }

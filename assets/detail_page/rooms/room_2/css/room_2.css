@@ -957,9 +957,19 @@
         height: 62px;
     }
 
+    .header__form-group-items{
+        flex-wrap: wrap;
+    }
+
     .header__form-group{
         background-color: var(--b-color);
         padding: 30px 15px;
+    }
+    
+    .header__form-group-btn,
+    .header__form-group-select,
+    .header__form-group-input-item{
+        width: 100%;
     }
 
     .container__booking-form{

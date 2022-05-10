@@ -228,7 +228,7 @@
 }
 
 .container__rooms-suites-items:hover .container__rooms-suites-room{
-    transform: translateY(0);
+    transform: translateY(-20px);
 }
 
 .container__rooms-suites-items:hover .line{
@@ -277,10 +277,10 @@
 
 .container__rooms-suites-room{
     position: absolute;
-    bottom: 40px;
+    bottom: 0;
     padding: 0 20px;
     width: 100%;
-    transform: translateY(60px);
+    transform: translateY(25%);
     transition: all linear 0.3s;
 }
 

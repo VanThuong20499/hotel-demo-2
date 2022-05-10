@@ -420,6 +420,11 @@
     margin-bottom: 30px;
 }
 
+.container__news-single-form textarea:focus,
+.container__news-single-form input:focus{
+    border-bottom: 1px solid var(--primary-color);
+}
+
 .container__news-single-form-btn{
     position: relative;
     padding: 13px 22px;
