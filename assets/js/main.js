@@ -170,7 +170,7 @@
         }
         headerImg.style.backgroundImage = `url('${myArrayImg[count].path}')`;
         if(document.documentElement.clientWidth > 1023){
-            document.querySelector('.header__container-titlxe-btn .active').classList.remove('active');
+            document.querySelector('.header__container-title-btn .active').classList.remove('active');
         }
         headerBtn[count].classList.add('active');
         headerText.textContent = myArrayImg[count].text;
